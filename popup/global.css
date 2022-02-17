@@ -1,0 +1,105 @@
+:root {
+    --primary: #0e76a8;
+    --primary-light: #2f82a8;
+    --primary-dark: #006492;
+    --font: "Roboto Serif", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+    width: 300px;
+    height: 300px;
+    font-family: var(--font);
+}
+
+.title {
+    color: rgb(247, 235, 235);
+    font-size: 0.94rem;
+    padding: 0.7rem;
+    font-weight: 500;
+    background-color: rgb(30, 30, 30);
+}
+
+.warning {
+    font-size: 0.9rem;
+    color: red;
+    padding: 0.5em;
+    text-align: center;
+}
+.loader-wrapper {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 2em;
+    padding: 1em, 0;
+    margin: 1em, 0;
+}
+
+.back-loader {
+    background-color: rgb(0, 78, 0);
+    width: 80%;
+    height: 2em;
+    border-radius: 5px;
+}
+.front-loader {
+    background-color: rgb(16, 172, 16);
+    height: 2em;
+    width: 0;
+    border-radius: 5px;
+    transition: width 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.progress {
+    color: white;
+    width: max-content;
+}
+
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    width: 90%;
+    height: 4.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--primary-light);
+    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.winner {
+    color: white;
+    text-align: center;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 2.5em;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+}
+
+.btn:disabled {
+    background-color: rgb(155, 155, 155);
+}

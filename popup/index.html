@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="global.css" rel="stylesheet" />
+    <title>popup</title>
+  </head>
+  <body>
+    <h1 class="title">
+      Trouver la personne la plus influente de votre feed <span style="color: #0e76a8; text-decoration: underline;">LinkedIn</span> 👇
+    </h1>
+    <p class="warning">🚨 Cette fenêtre doit rester ouverte jusqu'à la fin...</p>
+    <section class="loader-wrapper">
+        <div class="back-loader">
+          <div class="front-loader"/></div>
+        </div>
+        <p class="progress">0%</p>
+    </section>
+    <section class="result-wrapper">
+      <p class="winner">Le(la) gagnant(e) est ... 🏆</p>
+    </section>
+    <button id="fire" class="btn">C'est parti !</button>
+  </body>
+
+  <script src="findIn.js"></script>
+</html>

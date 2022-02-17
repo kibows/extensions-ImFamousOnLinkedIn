@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "IamFamousOnLinkedIn",
+  "version": "1.0",
+
+  "description": "Trouvez la personne la plus influente dans votre feed LinkedIn",
+
+  "icons": {
+    "48": "medal.svg",
+    "96": "medal.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/feed/*"],
+      "js": ["main.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "medal.svg",
+      "32": "medal.svg"
+    },
+    "default_popup": "popup/index.html",
+    "default_title": "Qui est le plus influent?!"
+  }
+}
