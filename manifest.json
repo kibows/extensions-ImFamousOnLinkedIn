@@ -1,13 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "IamFamousOnLinkedIn",
-  "version": "1.0",
-
-  "description": "Trouvez la personne la plus influente dans votre feed LinkedIn",
+  "name": "I'am famous on LinkedIn ✌️",
+  "version": "0.0.1",
+  "description": "Trouvez la personne la plus influente de votre feed LinkedIn",
 
   "icons": {
-    "48": "medal.svg",
-    "96": "medal.svg"
+    "48": "fame.svg",
+    "96": "fame.svg"  
   },
 
   "content_scripts": [
@@ -24,10 +23,11 @@
 
   "browser_action": {
     "default_icon": {
-      "16": "medal.svg",
-      "32": "medal.svg"
+      "16": "fame.svg",
+      "32": "fame.svg"
     },
     "default_popup": "popup/index.html",
     "default_title": "Qui est le plus influent?!"
-  }
+  },
+  "permissions": ["<all_urls>"]
 }

@@ -1,3 +1,2 @@
-console.log("ooooooooooooosgjhqfdofjnsomg")
-console.log("non mais")
+console.log("I'm famous !")
 

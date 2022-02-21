@@ -1,20 +1,20 @@
-const tabs = browser.tabs;
+let tabs;
+navigator.userAgent.match(/chrome|chromium|crios/i) ? (tabs = chrome.tabs) : (tabs = browser.tabs);
 
 document.querySelector('#fire').onclick = (e) => {
-  console.log('clicked');
-  console.log(e, e.target)
-  e.target.disabled = true
-  browser.tabs
-    .query({
+  e.target.disabled = true;
+  tabs.query(
+    {
       active: true,
       currentWindow: true,
-    })
-    .then((t) => {
+    },
+    (t) => {
       const port = tabs.connect(t[0].id, { name: 'theFireTab' });
       port.postMessage({ msg: 'fire' });
       port.onMessage.addListener((data) => {
         if (data.run) {
           document.querySelector('.loader-wrapper').style.display = 'flex';
+          document.querySelector('.warning').style.display = 'flex';
         }
         if (data.progress) {
           document.querySelector('.front-loader').style.width = `${data.progress}%`;
@@ -26,5 +26,6 @@ document.querySelector('#fire').onclick = (e) => {
           setTimeout(() => (document.querySelector('.result-wrapper').style.backgroundColor = 'rgb(30, 30, 30)'), 800);
         }
       });
-    });
+    }
+  );
 };
